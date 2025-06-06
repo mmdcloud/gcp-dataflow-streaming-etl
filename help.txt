@@ -1,0 +1,10 @@
+gcloud pubsub topics create streaming-source
+gcloud pubsub subscriptions create streaming-source-sub --topic=streaming-source
+bq mk --dataset orbital-bee-455915-h5:streaming_dest
+CREATE TABLE streaming_dataset.sensor_data (
+  name STRING,
+  email STRING,
+  city STRING,
+  category STRING,
+  timestamp TIMESTAMP  
+);
