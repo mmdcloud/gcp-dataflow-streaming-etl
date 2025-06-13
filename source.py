@@ -3,7 +3,7 @@ from google.cloud import pubsub_v1
 import random
 
 # Configuration
-project_id = "orbital-bee-455915-h5"
+project_id = "encoded-alpha-457108-e8"
 topic_id = "streaming-source"
 
 # Sample data for generating records
