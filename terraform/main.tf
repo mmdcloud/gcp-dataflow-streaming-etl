@@ -33,13 +33,25 @@ resource "google_service_account" "service_account" {
 
 resource "google_project_iam_member" "bigquery_data_editor" {
   project = data.google_project.current.project_id
-  role    = "roles/bigquery.admin"
+  role    = "roles/bigquery.dataEditor"
   member  = "serviceAccount:${google_service_account.service_account.email}"
 }
 
 resource "google_project_iam_member" "pubsub_subscriber" {
   project = data.google_project.current.project_id
-  role    = "roles/pubsub.admin"
+  role    = "roles/pubsub.subscriber"
+  member  = "serviceAccount:${google_service_account.service_account.email}"
+}
+
+resource "google_project_iam_member" "pubsub_publisher" {
+  project = data.google_project.current.project_id
+  role    = "roles/pubsub.publisher"
+  member  = "serviceAccount:${google_service_account.service_account.email}"
+}
+
+resource "google_project_iam_member" "service_account_token_creator" {
+  project = data.google_project.current.project_id
+  role    = "roles/iam.serviceAccountTokenCreator"
   member  = "serviceAccount:${google_service_account.service_account.email}"
 }
 
