@@ -1,0 +1,11 @@
+{
+  "image": "us-central1-docker.pkg.dev/encoded-alpha-457108-e8/pubsub-bq-job/pubsub-bq-job:latest",
+  "sdk_info": {
+    "language": "PYTHON"
+  },
+  "metadata": {
+    "name": "Pub/Sub to BigQuery Python Dataflow",
+    "description": "Custom Apache Beam pipeline in Python",
+    "parameters": []
+  }
+}
