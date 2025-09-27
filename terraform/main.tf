@@ -115,11 +115,10 @@ module "template_bucket" {
 }
 
 resource "google_dataflow_flex_template_job" "custom_job" {
-  provider                = google-beta
   name                    = "pubsub-bq-dataflow-job"
   project                 = data.google_project.current.project_id
   container_spec_gcs_path = "gs://${module.template_bucket.name}/flex_template.json"
-  parameters = {}
+  parameters              = {}
   enable_streaming_engine = true
   region                  = var.location
   on_delete               = "cancel"

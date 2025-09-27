@@ -1,8 +1,0 @@
-{
-  "image": "${REGION}-docker.pkg.dev/${PROJECT_ID}/dataflow/${IMAGE_NAME}:latest",
-  "metadata": {
-    "name": "Pub/Sub to BigQuery Python Dataflow",
-    "description": "Custom Apache Beam pipeline in Python",
-    "parameters": []
-  }
-}
